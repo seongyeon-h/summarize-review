@@ -6,12 +6,22 @@
 
 ```bash
 AIFFEL_quest_rs
-├── MainQuest
+├── Exploration
 │   ├── Quest01
 │   │   ├── Quest01.ipynb
 │   │   └── README.md
-│   ├── Quest02
+│   ├── ...
 │   └── Quest08
-├── Exploration
-└── GoingDeeper
+├── GoingDeeper
+│   ├── Quest01
+│   │   ├── Quest01.ipynb
+│   │   └── README.md
+│   ├── ...
+│   └── Quest09
+└── MainQuest
+    ├── Quest01
+    │   ├── Quest01.ipynb
+    │   └── README.md
+    ├── ...
+    └── Quest05
 ```

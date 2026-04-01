@@ -6,8 +6,30 @@
 # PRT(Peer Review Template)
 - [X]  **1. 주어진 문제를 해결하는 완성된 코드가 제출되었나요?**
     - 문제에서 요구하는 최종 결과물이 첨부되었는지 확인
-        - 중요! 해당 조건을 만족하는 부분을 캡쳐해 근거로 첨부
-    
+        - 중요! 해당 조건을 만족하는 부분을 캡쳐해 근거로 첨부  
+```
+img_show = cv2.addWeighted(img_orig, 0.6, color_mask, 0.4, 0.0)
+plt.imshow(cv2.cvtColor(img_show, cv2.COLOR_BGR2RGB))
+plt.show()
+
+img_orig_blur = cv2.blur(img_orig, (13, 13))
+plt.imshow(cv2.cvtColor(img_orig_blur, cv2.COLOR_BGR2RGB))
+plt.show()
+
+img_mask_color = cv2.cvtColor(img_mask, cv2.COLOR_GRAY2BGR)
+img_bg_mask = cv2.bitwise_not(img_mask_color)
+img_bg_blur = cv2.bitwise_and(img_orig_blur, img_bg_mask)
+plt.imshow(cv2.cvtColor(img_bg_blur, cv2.COLOR_BGR2RGB))
+plt.show()
+
+img_concat = np.where(img_mask_color==255, img_orig, img_bg_blur)
+plt.imshow(cv2.cvtColor(img_concat, cv2.COLOR_BGR2RGB))
+plt.show()
+
+img_concat = np.where(img_mask_color == 255, img_orig_blur, img_orig)
+plt.imshow(cv2.cvtColor(img_concat, cv2.COLOR_BGR2RGB))
+plt.show()
+```   
 - [X]  **2. 전체 코드에서 가장 핵심적이거나 가장 복잡하고 이해하기 어려운 부분에 작성된 
 주석 또는 doc string을 보고 해당 코드가 잘 이해되었나요?**
     - 해당 코드 블럭을 왜 핵심적이라고 생각하는지 확인

@@ -1,3 +1,4 @@
+<<<<<<< main
 # AIFFEL Campus Online Code Peer Review Templete
 - 코더 : 이희선
 - 리뷰어 : 박찬영
@@ -285,3 +286,5 @@ Erosion:
 개선점 X
 - 각 코드별로 정리를 깔끔하게 해놓았으며, 리뷰어가 수정할 점이 보이지 않았음
 ```
+=======
+>>>>>>> main
